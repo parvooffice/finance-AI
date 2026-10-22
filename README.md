@@ -98,6 +98,10 @@ The root `render.yaml` Blueprint creates the React static site, Express API, and
 
 The frontend build reads the deployed API hostname from Render and configures the API URL automatically. The services use Render's private network for API-to-calculator requests.
 
+## Deploy the frontend to Vercel
+
+The repository includes Vercel configuration for either the repository root or `frontend` as the Vercel project root. Both configurations install frontend dependencies before building, then publish the Vite output. If deploying the frontend separately from the APIs, set `VITE_API_URL` in Vercel to the deployed Express API URL ending in `/api`.
+
 ## MVP behavior
 
 - The journey includes income entry, editable deduction cards, and side-by-side regime estimates.
