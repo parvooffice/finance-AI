@@ -87,6 +87,17 @@ npm run build
 
 The production bundle is written to `frontend/dist`. The **Download report** button opens the browser print dialog; choose **Save as PDF** to create a PDF report.
 
+## Deploy to Render
+
+The root `render.yaml` Blueprint creates the React static site, Express API, and FastAPI calculation service. To deploy:
+
+1. Push the project to a GitHub repository and connect that repository to Render.
+2. In Render, create a new **Blueprint** and select the repository. Render will read `render.yaml` and create the three services.
+3. Add a MongoDB connection string as `MONGODB_URI` for the API service. Without it, the API falls back to temporary in-memory storage and saved journeys can be lost when the service restarts.
+4. Wait for the frontend and both API services to finish deploying, then open the frontend's `onrender.com` URL.
+
+The frontend build reads the deployed API hostname from Render and configures the API URL automatically. The services use Render's private network for API-to-calculator requests.
+
 ## MVP behavior
 
 - The journey includes income entry, editable deduction cards, and side-by-side regime estimates.

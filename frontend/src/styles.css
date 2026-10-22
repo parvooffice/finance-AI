@@ -11,3 +11,84 @@
 
 .fy-pill select{appearance:none;border:0;background:transparent;outline:0;color:#263951;font-size:12px;font-weight:600;cursor:pointer}.fy-pill:focus-within{border-color:#91b8e4;box-shadow:0 0 0 3px #e9f3ff}
 @media(max-width:700px){.fy-pill select{font-size:10px}}
+:root{--deduction-label:#718095}
+.deduction-table{display:flex;flex-direction:column;gap:8px}
+.deduction-table-head,.deduction-card{display:grid;grid-template-columns:minmax(180px,1fr) minmax(100px,145px) minmax(170px,205px) minmax(100px,145px);align-items:center;gap:12px}
+.deduction-table-head{padding:0 13px 3px;color:#718095;font-size:9px;font-weight:700;letter-spacing:.45px}
+.deduction-card{background:#fff;border:1px solid #e8edf2;border-radius:9px;padding:10px 12px;min-width:0}
+.deduction-value-box{padding:9px 10px;border:1px solid #e5e9ef;border-radius:6px;background:#f8fafc;color:#65758a;font-size:11px;font-weight:600;white-space:nowrap}
+.deduction-value-box.considered{background:#f0f7ff;color:#315f91;border-color:#e1edf9}
+.actual-cell{min-width:0;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.actual-input{height:34px;min-width:90px;flex:1;display:flex;align-items:center;gap:5px;border:1px solid #b9d5f1;border-radius:6px;background:#fff;padding:0 8px;color:#6384a8}
+.actual-input:focus-within{border-color:#438fe2;box-shadow:0 0 0 3px #e9f3ff}
+.actual-input input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:#203951;font-size:11px;font-weight:700}
+.actual-input input::-webkit-inner-spin-button{-webkit-appearance:none}
+.document-upload{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:30px;border:1px dashed #c7d4e1;border-radius:6px;padding:0 7px;color:#4c78a4;font-size:9px;font-weight:600;cursor:pointer;white-space:nowrap}
+.document-upload:hover{border-color:#438fe2;background:#f5f9ff}
+.document-upload input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.attached-name{width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#6b8a72;font-size:8px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:760px){.deduction-table-head,.deduction-card{grid-template-columns:minmax(115px,1fr) minmax(78px,.65fr) minmax(130px,1.05fr) minmax(78px,.65fr);gap:7px}.deduction-table-head{padding:0 7px;font-size:8px}.deduction-card{padding:9px 7px}.deduction-icon{width:27px;height:27px;font-size:14px}.deduction-copy b{font-size:9px}.deduction-copy small{font-size:7px}.deduction-value-box{padding:8px 5px;font-size:9px;text-align:center}.actual-cell{gap:4px}.actual-input{min-width:60px;height:31px;padding:0 5px}.actual-input input{font-size:9px}.document-upload{padding:0 5px;min-height:27px;font-size:8px}}
+.deduction-table{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.deduction-table-head{display:none}
+.deduction-card{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:12px}
+.deduction-icon{grid-column:1;grid-row:1;width:30px;height:30px}
+.deduction-copy{grid-column:2/4;grid-row:1}
+.deduction-value-box{grid-row:2;padding:8px 7px;text-align:left;font-size:10px}
+.deduction-value-box:before{display:block;margin-bottom:4px;color:#8a98a8;font-size:8px;font-weight:500}
+.deduction-value-box:not(.considered):before{content:'Eligible'}
+.deduction-value-box.considered:before{content:'Considered'}
+.actual-cell{grid-column:2;grid-row:2;align-content:flex-start;gap:4px}
+.actual-cell:before{content:'Actual';width:100%;color:#8a98a8;font-size:8px}
+.actual-input{width:auto;min-width:0;height:33px;flex:1}
+.actual-cell{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;column-gap:6px}
+.actual-cell:before{grid-column:1/-1}
+.document-upload{min-height:33px;padding:0 7px}
+.attached-name{display:none}
+.actual-cell{grid-template-columns:minmax(0,1fr) auto;align-items:center;column-gap:5px;row-gap:4px}
+.actual-cell:before{display:none}
+.actual-label{color:#8a98a8;font-size:8px}
+.actual-label,.document-actions{grid-column:1/-1}
+.document-actions{display:flex;align-items:center;gap:5px}
+.document-upload,.document-preview{min-height:24px;padding:0 6px;font-size:8px}
+.document-actions select{min-height:24px;max-width:110px;border:1px solid #dce6ef;border-radius:6px;background:#fff;color:#4c78a4;padding:0 5px;font-size:8px;cursor:pointer}
+.document-preview{display:inline-flex;align-items:center;justify-content:center;gap:4px;border:1px solid #dce6ef;border-radius:6px;background:#fff;color:#4c78a4;cursor:pointer;white-space:nowrap}
+.document-preview:hover{border-color:#438fe2;background:#f5f9ff}
+@media(max-width:700px){.deduction-table{grid-template-columns:1fr}.deduction-card{padding:10px 12px}}
+.deduction-table{grid-template-columns:minmax(0,1fr);gap:12px}
+.deduction-card.evidence-card{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.8fr);gap:14px 20px;padding:16px 18px}
+.evidence-heading{display:flex;align-items:center;gap:10px;min-width:0}
+.evidence-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.evidence-metric{min-width:0;border:1px solid #e4eaf0;border-radius:7px;background:#fbfcfe;padding:7px 9px}
+.evidence-metric span{display:block;color:#8795a5;font-size:8px;margin-bottom:4px;white-space:nowrap}
+.evidence-metric b{display:block;color:#31465d;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.evidence-metric.master-preview button{border:0;background:none;color:#347ed1;font-size:10px;font-weight:700;padding:0;cursor:pointer}
+.evidence-fields{grid-column:1/-1;display:grid;grid-template-columns:minmax(160px,1.4fr) minmax(130px,1fr) minmax(115px,.8fr) 82px 82px;align-items:end;gap:8px}
+.evidence-fields>label:not(.document-upload){display:block;min-width:0}
+.evidence-fields>label:not(.document-upload)>span{display:block;color:#718095;font-size:8px;margin-bottom:4px}
+.evidence-fields input:not([type=file]){width:100%;height:33px;border:1px solid #e1e7ee;border-radius:6px;background:#fff;padding:0 8px;color:#24364c;font-size:10px;outline:0}
+.evidence-fields input:focus{border-color:#7aafe9;box-shadow:0 0 0 3px #e9f3ff}
+.evidence-amount .actual-input{width:100%;height:33px}
+.evidence-fields .document-upload,.evidence-fields .document-preview{height:33px;min-height:33px;align-self:end}
+.evidence-fields .document-upload{width:100%}
+.evidence-fields .document-preview{width:100%}
+.evidence-fields .document-preview:disabled{opacity:.48;cursor:default}
+.evidence-card>.attached-name{grid-column:1/-1;display:block;margin-top:-8px}
+@media(max-width:760px){.deduction-card.evidence-card{grid-template-columns:1fr;gap:12px}.evidence-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(90px,.8fr) 75px 75px}.evidence-summary{gap:6px}.evidence-metric{padding:7px 6px}}
+@media(max-width:520px){.evidence-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.evidence-fields .evidence-amount{grid-column:1}.evidence-fields .document-upload{grid-column:1}.evidence-fields .document-preview{grid-column:2;grid-row:3}.evidence-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.evidence-fields{display:flex;flex-direction:column;align-items:stretch;gap:8px}
+.policy-reference-list{display:flex;flex-direction:column;gap:7px}
+.policy-reference-row{display:grid;grid-template-columns:minmax(150px,1.4fr) minmax(130px,1fr) minmax(115px,.8fr) 82px 82px 28px;align-items:end;gap:8px}
+.policy-reference-row>label{display:block;min-width:0}
+.policy-reference-row>label>span,.evidence-actions-row .evidence-amount>span{display:block;color:#718095;font-size:8px;margin-bottom:4px}
+.policy-reference-row input{width:100%;height:33px;border:1px solid #e1e7ee;border-radius:6px;background:#fff;padding:0 8px;color:#24364c;font-size:10px;outline:0}
+.policy-reference-row input:focus{border-color:#7aafe9;box-shadow:0 0 0 3px #e9f3ff}
+.remove-policy{width:28px;height:30px;display:grid;place-items:center;border:1px solid #e4eaf0;border-radius:6px;background:#fff;color:#8391a0}
+.remove-policy:hover{border-color:#e7b4b2;background:#fff8f7;color:#c75f59}
+.add-policy{align-self:flex-start;display:inline-flex;align-items:center;gap:4px;padding:4px 0;border:0;background:none;color:#347ed1;font-size:9px;font-weight:700;cursor:pointer}
+.policy-reference-row .policy-amount{display:block;min-width:0}
+.policy-reference-row .actual-input{width:100%;height:33px}
+.policy-reference-row .document-upload,.policy-reference-row .document-preview{width:100%;height:33px;min-height:33px;align-self:end}
+.policy-reference-row .remove-policy{grid-column:6;grid-row:1;align-self:end}
+@media(max-width:760px){.policy-reference-row{grid-template-columns:minmax(130px,1.2fr) minmax(120px,1fr) minmax(100px,.8fr) 72px 72px 26px;gap:6px}}
+@media(max-width:520px){.policy-reference-row{grid-template-columns:minmax(0,1fr) minmax(0,1fr) 26px;gap:6px}.policy-reference-row>label:nth-child(1){grid-column:1/3;grid-row:1}.policy-reference-row>label:nth-child(2){grid-column:1/3;grid-row:2}.policy-reference-row .policy-amount{grid-column:1;grid-row:3}.policy-reference-row .document-upload{grid-column:2;grid-row:3}.policy-reference-row .document-preview{grid-column:1;grid-row:4}.policy-reference-row .remove-policy{grid-column:3;grid-row:1}}
