@@ -45,7 +45,7 @@ Copy-Item .env.example .env
 npm run dev
 ```
 
-The API listens at <http://localhost:4001>. Its health check is <http://localhost:4001/api/health>. Set `MONGODB_URI` in `backend/.env` to your MongoDB URL. If MongoDB is not running, the API logs a warning and stores the current journey in memory until the server stops. `FASTAPI_URL` defaults to `http://localhost:8001`.
+The API listens at <http://localhost:4001>. Its health check is <http://localhost:4001/api/health>. Set `MONGODB_URI` in `backend/.env` to your MongoDB URL. Set `OPENAI_API_KEY` there to enable the AI conversation assistant; the key stays on the backend and is never sent to the browser. `OPENAI_MODEL` defaults to `gpt-4.1-mini`. If MongoDB is not running, the API logs a warning and stores the current journey in memory until the server stops. `FASTAPI_URL` defaults to `http://localhost:8001`.
 
 ### 3. Start the React app
 
@@ -69,6 +69,7 @@ VITE_API_URL=http://localhost:4001/api
 | `GET` | `/api/journey` | Load the saved demo journey |
 | `PUT` | `/api/journey` | Save income details and deduction amounts |
 | `POST` | `/api/calculate` | Forward an estimate request to FastAPI |
+| `POST` | `/api/chat/ai` | Generate an authenticated AI conversation-assistant reply |
 | `GET` | `http://localhost:8000/health` | FastAPI service status |
 | `POST` | `http://localhost:8000/calculate` | Calculate placeholder regime estimates |
 
