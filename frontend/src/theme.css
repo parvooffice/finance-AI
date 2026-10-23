@@ -1,0 +1,312 @@
+:root {
+  color-scheme: light;
+  --theme-page: #f3f6fa;
+  --theme-surface: #ffffff;
+  --theme-surface-soft: #f7f9fc;
+  --theme-border: #d6e0ea;
+  --theme-text: #172b43;
+  --theme-muted: #52667d;
+  --theme-input: #ffffff;
+  --theme-hover: #eaf1f8;
+  --theme-shadow: 0 8px 28px #132c4512;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --theme-page: #101923;
+  --theme-surface: #192633;
+  --theme-surface-soft: #202f3e;
+  --theme-border: #3a4b5c;
+  --theme-text: #f0f5fa;
+  --theme-muted: #bdcbd8;
+  --theme-input: #111e2a;
+  --theme-hover: #293c4e;
+  --theme-shadow: 0 8px 28px #00000030;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--theme-page);
+  color: var(--theme-text);
+  color-scheme: inherit;
+}
+
+body,
+.app-shell,
+.page,
+.screen,
+.dashboard-shell,
+.dashboard-page,
+.saas-layout,
+.saas-main,
+.saas-content,
+.stock-app,
+.welcome-shell {
+  background-color: var(--theme-page);
+  color: var(--theme-text);
+}
+
+.topbar,
+.stepper,
+.fy-pill,
+.card,
+.choice,
+.residency-option,
+.back-btn,
+.deduction-card,
+.deduction-value-box,
+.breakup-card,
+.document-card,
+.profile-card,
+.stat-card,
+.saas-panel,
+.plan-card,
+.onboard-card,
+.stock-panel,
+.stock-card,
+.support-content,
+.chat-panel,
+.ai-new-chat,
+.profile-dropdown,
+.profile-dropdown button,
+.inbox-row,
+.bottom-nav {
+  background-color: var(--theme-surface);
+  border-color: var(--theme-border);
+  color: var(--theme-text);
+  box-shadow: var(--theme-shadow);
+}
+
+.topbar,
+.fy-pill,
+.stepper,
+.card,
+.deduction-card,
+.profile-card,
+.stat-card,
+.saas-panel,
+.plan-card,
+.onboard-card,
+.stock-panel,
+.stock-card,
+.support-content,
+.chat-panel,
+.bottom-nav {
+  border: 1px solid var(--theme-border);
+}
+
+.global-header {
+  background-color: var(--theme-surface);
+  border-color: var(--theme-border);
+  color: var(--theme-text);
+}
+
+input:not([type='file']),
+textarea,
+select,
+.profession-search,
+.amount-input,
+.global-search,
+.stock-controls input,
+.stock-controls select {
+  background-color: var(--theme-input);
+  border-color: var(--theme-border);
+  color: var(--theme-text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--theme-muted);
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5, p, label, strong, b, .field-head h3,
+.section-heading h2, .title-row h1, .dashboard-heading h2,
+.stock-app h1, .stock-app h2, .stock-app h3,
+.stock-app b, .saas-content h1, .saas-content h2,
+.detail-title h1, .stock-panel-head b, .fundamentals-grid b,
+.performance-grid b, .financial-row b {
+  color: var(--theme-text);
+}
+
+.subtitle,
+.section-heading p,
+.field-head p,
+.residency-card p,
+.breakup-header p,
+.documents-head p,
+.input-field small,
+.choice small,
+.deduction-copy small,
+.deduction-code,
+.step-caption,
+.profile-main p,
+.profile-metrics small,
+.meter-hint,
+.stock-muted,
+.stock-card-title small,
+.news-row small,
+.stock-panel-head small,
+.fundamentals-grid small,
+.performance-grid small,
+.profile-dropdown button,
+.ai-privacy-note {
+  color: var(--theme-muted);
+}
+
+.step-line,
+.profile-metrics,
+.profile-metrics > div,
+.financial-row,
+.news-row,
+.watch-row,
+.stock-card-foot,
+.tabs,
+.bottom-nav {
+  border-color: var(--theme-border);
+}
+
+.choice:hover,
+.residency-option:hover,
+.inbox-row:hover,
+.profile-dropdown button:hover,
+.thread-list button:hover,
+.global-profile:hover,
+.theme-toggle:hover,
+.global-login:hover {
+  background-color: var(--theme-hover);
+}
+
+.assistant-card {
+  background: color-mix(in srgb, #21a176 13%, var(--theme-surface));
+  border-color: color-mix(in srgb, #21a176 35%, var(--theme-border));
+}
+
+.assistant-title,
+.assistant-card p,
+.assistant-card .ai-tag {
+  color: var(--theme-text);
+}
+
+.gauge-cover {
+  background-color: var(--theme-surface);
+}
+
+.dashboard-topbar,
+.saas-sidebar {
+  background-color: #092d52;
+  color: #f4f8fc;
+}
+
+.dashboard-topbar .dash-icon,
+.saas-sidebar nav button,
+.saas-sidebar .sidebar-bottom > button {
+  color: #e2edf7;
+}
+
+.dashboard-shell .profile-card,
+.dashboard-shell .meter-card,
+.dashboard-shell .bottom-nav {
+  background-color: var(--theme-surface);
+  border-color: var(--theme-border);
+  color: var(--theme-text);
+}
+
+.meter-card-head strong,
+.gauge-score,
+.profile-name-row h1,
+.profile-metrics strong {
+  color: var(--theme-text);
+}
+
+.amount-input input,
+.fy-pill select,
+.profile-dropdown button,
+.stock-controls select option {
+  color: var(--theme-text);
+}
+
+.stock-sector,
+.market-live,
+.financial-row.heading,
+.stock-tabs button,
+.range-buttons button {
+  background-color: var(--theme-surface-soft);
+  color: var(--theme-muted);
+}
+
+.stock-tabs button.active,
+.range-buttons button.selected {
+  background-color: #dceefa;
+  color: #155b91;
+}
+
+.saas-error,
+.ai-error {
+  color: #a42620;
+}
+
+:root[data-theme='dark'] .assistant-card {
+  background: #17362f;
+  border-color: #356654;
+}
+
+:root[data-theme='dark'] .dashboard-shell,
+:root[data-theme='dark'] .dashboard-page {
+  background-color: var(--theme-page);
+}
+
+:root[data-theme='dark'] .meter-icon,
+:root[data-theme='dark'] .meter-label,
+:root[data-theme='dark'] .coming-label,
+:root[data-theme='dark'] .gauge-label {
+  background-color: #263747;
+}
+
+:root[data-theme='dark'] .gauge-ring {
+  filter: saturate(.8) brightness(1.15);
+}
+
+:root[data-theme='dark'] .step-number,
+:root[data-theme='dark'] .choice.selected,
+:root[data-theme='dark'] .residency-option.checked,
+:root[data-theme='dark'] .deduction-value-box.considered,
+:root[data-theme='dark'] .stock-tabs button.active,
+:root[data-theme='dark'] .range-buttons button.selected {
+  background-color: #203c53;
+  color: #d5eaff;
+}
+
+:root[data-theme='dark'] .global-search kbd,
+:root[data-theme='dark'] .global-signup,
+:root[data-theme='dark'] .stock-primary {
+  color: #f4f8fc;
+}
+
+:root[data-theme='dark'] .message-list article.sent {
+  background-color: #21466a;
+  color: #f0f6fc;
+}
+
+:root[data-theme='dark'] .message-list article.received {
+  background-color: #263746;
+  color: #eef4fa;
+}
+
+:root[data-theme='dark'] .ai-error,
+:root[data-theme='dark'] .saas-error {
+  background-color: #482b2d;
+  color: #ffd2ce;
+}
+
+:root[data-theme='dark'] .up { color: #65d4a6; }
+:root[data-theme='dark'] .down { color: #ff9993; }
+
+:root[data-theme='light'] .up { color: #08734f; }
+:root[data-theme='light'] .down { color: #b42318; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
